@@ -1,0 +1,160 @@
+
+    #primaryButton {
+        -fx-background-color: #2e98e5;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    #secondaryButton {
+        -fx-background-color: transparent;
+        -fx-border-color: #2e98e5;
+        -fx-text-fill: #2e98e5;
+        -fx-border-width: 3px;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-cursor: hand;
+    }
+    #primaryButton:hover, #secondaryButton:hover {
+        -fx-background-color: #e5f212;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    #primaryButton:pressed, #secondaryButton:pressed {
+        -fx-background-color: #bdc80f;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    #primaryButton:disabled, #secondaryButton:disabled {
+        -fx-background-color: transparent;
+        -fx-border-color: #2e98e5;
+        -fx-text-fill: #2e98e5;
+        -fx-border-width: 3px;
+        -fx-opacity: 0.5;
+        -fx-cursor: default;
+    }
+    #imageButton {
+        -fx-font-weight: normal;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-size: 13px;
+        -fx-background-color: transparent;
+        -fx-border-color: transparent;
+        -fx-border-width: 3px;
+        -fx-border-radius: 0px;
+        -fx-cursor: hand;
+    }
+    #imageButton:hover {
+        -fx-background-color: #e5f212;
+    }
+    #imageButton:pressed {
+        -fx-background-color: #bdc80f;
+    }
+    #hourButton {
+        -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 75%, #98d1fa, transparent);
+        -fx-border-color: transparent;
+        -fx-border-radius: 4px;
+        -fx-border-width: 3px;
+        -fx-cursor: hand;
+    }
+    #logOut{
+        -fx-background-color: transparent;
+        -fx-border-color: transparent;
+        -fx-border-radius: 4px;
+        -fx-border-width: 3px;
+        -fx-cursor: hand;
+    }
+    #hourButton:selected  { 
+        -fx-border-color: #bdc80f;
+    }
+    #logOut:hover {
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0, 0, 0);
+    }
+    #hourButton:hover {
+        -fx-border-color: #e5f212;
+    }
+    #toolBar{
+        -fx-background-color: #2e98e5;
+    }
+    #profile {
+        -fx-background-color: transparent;
+        -fx-cursor: hand;
+    }
+    #profile:hover {
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0, 0, 0);
+    }
+    #libre{
+       -fx-font-family:Arial;
+       -fx-font-weight: bold;
+       -fx-font-size: 20px;
+       -fx-text-fill: #149716;
+    }
+    #ocupado{
+       -fx-font-family:Arial;
+       -fx-font-weight: normal;
+       -fx-font-size: 17px;
+       -fx-text-fill: black;
+    }
+    #primaryHSeparator .line{
+        -fx-border-color: transparent;
+        -fx-background-color: linear-gradient(to right, #13649e, transparent);
+        -fx-border-width: 2px;
+    }
+    #secondaryHSeparator .line{
+        -fx-border-color: transparent;
+        -fx-background-color: linear-gradient(to bottom, #98d1fa, transparent);
+        -fx-border-width: 1px;
+    }
+    #primaryVSeparator .line{
+        -fx-border-color: transparent;
+        -fx-background-color: linear-gradient(to right, #13649e, transparent);
+        -fx-border-width: 2px;
+    }
+    #secondaryVSeparator .line{
+        -fx-border-color: transparent;
+        -fx-background-color: linear-gradient(to right, #98d1fa, transparent);
+        -fx-border-width: 1px;
+    }
+    .combo-box {
+        -fx-background-color: #98d1fa;
+        -fx-border-color: transparent;
+    }
+    .combo-box .list-cell{
+        -fx-font-family: Arial;
+    }
+    .combo-box .list-view{
+        -fx-background-color: #98d1fa;
+    }
+    .combo-box:hover {
+        -fx-background-color: #e5f212;
+    }
+    .combo-box:pressed {
+        -fx-background-color: #bdc80f;
+    }

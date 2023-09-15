@@ -1,0 +1,120 @@
+
+    .scroll-bar .track{
+        -fx-background-color: #98d1fa;
+    }
+    
+    .scroll-bar .thumb{
+        -fx-background-color:  #2e98e5;
+    }
+    
+    .scroll-bar .thumb:hover{
+        -fx-background-color:#e5f212;
+    }
+    
+    .scroll-bar .thumb:pressed{
+        -fx-background-color: #bdc80f;
+    }
+    
+    #titulo{
+        -fx-font-size: 14px;
+        -fx-text-fill: black;
+        -fx-font-weight: bold;
+    }
+
+    #base{
+        -fx-font-size: 16px;
+        -fx-text-fill: black;
+    }
+    
+    .scroll-pane{
+        -fx-border-color: transparent;
+        -fx-background-color: linear-gradient(to bottom, #13649e, transparent);
+        /*-fx-background-color: linear-gradient(to top, #98d1fa, transparent);*/
+        -fx-border-width: 1px;
+    }
+    
+    #pagoHecho{
+        -fx-font-size: 14px;
+        -fx-font-weight: bold;
+        -fx-text-fill: #149716;
+    }
+    #pagoNoHecho{
+        -fx-font-size: 14px;
+        -fx-font-weight: bold;
+        -fx-text-fill: #c91e1e;
+    }
+    .button {
+        -fx-background-color: transparent;
+        -fx-border-color: #2e98e5;
+        -fx-text-fill: #2e98e5;
+        -fx-border-width: 3px;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-cursor: hand;
+    }
+    
+    .separator .line{
+        -fx-border-color: transparent;
+        -fx-background-color: linear-gradient(to right, #98d1fa, transparent);
+        -fx-border-width: 1px;
+    }
+    
+    #primaryVSeparator .line{
+        -fx-border-color: transparent;
+        -fx-background-color: linear-gradient(to right, #13649e, transparent);
+        -fx-border-width: 2px;
+    }
+    
+    #cancelarBoton {
+        -fx-background-color: #2e98e5;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    
+    #cancelarBoton:hover, .button:hover {
+        -fx-background-color: #e5f212;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    #cancelarBoton:pressed, .button:pressed {
+        -fx-background-color: #bdc80f;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    .cancelarBoton:disabled {
+        -fx-background-color: transparent;
+        -fx-border-color: #2e98e5;
+        -fx-text-fill: #2e98e5;
+        -fx-border-width: 3px;
+        -fx-opacity: 0.5;
+        -fx-cursor: default;
+    }

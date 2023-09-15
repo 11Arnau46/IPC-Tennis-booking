@@ -1,0 +1,97 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 24, 2023, 11:43:02 AM
+    Author     : mehicepis
+*/ 
+
+    .text-field, .password-field {
+        -fx-font-size: 15px;
+        -fx-font-family:Arial;
+        -fx-prompt-text-fill: gray;
+        -fx-border-color: black;
+        -fx-text-fill: #000000;
+        -fx-background-color: transparent;
+        -fx-border-radius: 15px;
+        -fx-border-width:2px;
+        -fx-cursor: text;
+    }
+    .text-field:focused, password-field:focused {
+        -fx-border-color: #bdc80f;
+    }
+    .text-field:disabled, password-field:disabled {
+        -fx-opacity: 0.5;
+        -fx-cursor: default;
+    }
+    .text-field:hover, password-field:hover {
+        -fx-border-color: #e5f212;
+    }
+    .button {
+        -fx-background-color: #2e98e5;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    .button:hover {
+        -fx-background-color: #e5f212;
+    }
+    .button:pressed {
+        -fx-background-color: #bdc80f;
+    }
+    .button:disabled {
+        -fx-background-color: transparent;
+        -fx-border-color: #2e98e5;
+        -fx-text-fill: #2e98e5;
+        -fx-border-width: 3px;
+        -fx-opacity: 0.5;
+        -fx-cursor: default;
+    }
+    #imageButton {
+        -fx-font-weight: normal;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-size: 13px;
+        -fx-background-color: transparent;
+        -fx-border-color: transparent;
+        -fx-border-width: 1px;
+        -fx-border-radius: 0px;
+        -fx-cursor: hand;
+    }
+    #imageButton:hover {
+        -fx-background-color: #e5f212;
+        -fx-border-color: #e5f212;
+    }
+    #imageButton:pressed {
+        -fx-background-color: #bdc80f;
+        -fx-border-color: #e5f212;
+    }
+    #showPassword {
+        -fx-background-color: transparent;
+        -fx-border-color: transparent;
+        -fx-border-width: 2px;
+        -fx-border-radius: 100px;
+        -fx-cursor: hand;
+    }
+    #showPassword:pressed { 
+        -fx-border-color: #bdc80f;
+    }
+    #showPassword:hover {
+        -fx-border-color: #e5f212;
+    }
+    #toolBar{
+        -fx-background-color: #2e98e5;
+    }
+    #linkRegister:hover{
+        -fx-text-fill:#1c4fa7;
+    }
+
+

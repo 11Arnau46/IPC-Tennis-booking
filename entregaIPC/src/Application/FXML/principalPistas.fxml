@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="750.0" maxWidth="900.0" minHeight="750.0" minWidth="700.0" prefHeight="750.0" prefWidth="700.0" style="-fx-background-image: url(&quot;Iconos/WALLPAPER/background3.png&quot;); -fx-background-size: cover;" stylesheets="@../css/principalPistas.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller.principalPistasController">
+   <top>
+      <HBox id="toolBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" prefWidth="1144.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="400.0" prefHeight="90.0" prefWidth="400.0" spacing="12.0">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="90.0" maxWidth="95.0" prefHeight="90.0" prefWidth="95.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Iconos/principal/principal_dia.png" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="dayCombo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setDay" prefHeight="24.0" prefWidth="73.0" promptText="20" visibleRowCount="20" />
+                     </children>
+                  </VBox>
+                  <Separator id="primaryVSeparator" orientation="VERTICAL" prefHeight="200.0" />
+                  <Button id="imageButton" maxHeight="90.0" maxWidth="90.0" minHeight="90.0" mnemonicParsing="false" onAction="#switchToReservas" prefHeight="90.0" prefWidth="90.0">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" maxHeight="90.0" maxWidth="90.0" prefHeight="90.0" prefWidth="90.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Iconos/principal/principal_misReservas.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" maxWidth="90.0" prefHeight="16.0" prefWidth="90.0" text="Mis reservas" textAlignment="CENTER" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button id="imageButton" maxHeight="90.0" maxWidth="90.0" minHeight="90.0" mnemonicParsing="false" onAction="#switchToTabla" prefHeight="90.0" prefWidth="90.0">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" maxHeight="90.0" maxWidth="90.0" prefHeight="90.0" prefWidth="90.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Iconos/tennis-court.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" maxWidth="90.0" prefHeight="16.0" prefWidth="90.0" text="Horario" textAlignment="CENTER" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="1000000.0">
+               <children>
+                  <Button id="profile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToPerfil" prefHeight="90.0">
+                     <graphic>
+                        <HBox fx:id="hBox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="145.0" spacing="10.0">
+                           <children>
+                              <Circle fx:id="circleAvatar" fill="DODGERBLUE" radius="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Text fx:id="userName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </Button>
+                  <Button id="logOut" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Iconos/principal/principal_cierresesion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="13.0" right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <HBox prefHeight="634.0" prefWidth="103.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane maxWidth="110.0" minWidth="110.0" prefWidth="110.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="76.0" prefWidth="110.0" spacing="5.0" GridPane.rowIndex="6">
+                     <children>
+                        <Separator id="secondaryHSeparator" prefWidth="200.0" />
+                        <Label alignment="CENTER" prefHeight="0.0" prefWidth="84.0" text="Mostrar por" wrapText="true" />
+                        <ComboBox fx:id="showBy" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#showBy" prefHeight="26.0" prefWidth="85.0" promptText="Hora" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ToggleButton id="hourButton" fx:id="courtButton1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setCourt" prefHeight="80.0" prefWidth="100.0" text="Pista 1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <ToggleButton id="hourButton" fx:id="courtButton2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setCourt" prefHeight="80.0" prefWidth="100.0" text="Pista 2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <ToggleButton id="hourButton" fx:id="courtButton3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setCourt" prefHeight="80.0" prefWidth="100.0" text="Pista 3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <ToggleButton id="hourButton" fx:id="courtButton4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setCourt" prefHeight="80.0" prefWidth="100.0" text="Pista 4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+                        <ToggleButton id="hourButton" fx:id="courtButton5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setCourt" prefHeight="80.0" prefWidth="100.0" text="Pista 5">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                     <children>
+                        <ToggleButton id="hourButton" fx:id="courtButton6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setCourt" prefHeight="80.0" prefWidth="100.0" text="Pista 6">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Separator id="primaryVSeparator" orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+   </left>
+   <center>
+      <GridPane minWidth="-Infinity" prefWidth="412.0" vgap="5.0" BorderPane.alignment="TOP_LEFT">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="4.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane hgap="5.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="71.0" text="9h - 10h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText1" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel1" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton1" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="1">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="10h - 11h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText2" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel2" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton2" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="3">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="11h - 12h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText3" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel3" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton3" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="5">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="6">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="12h - 13h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText4" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel4" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton4" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="7">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="8">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="13h - 14h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText5" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel5" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton5" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="9">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="10">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="14h - 15h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText6" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel6" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton6" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="11">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="12">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="15h - 16h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText7" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel7" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton7" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="13">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="14">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="16h - 17h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText8" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel8" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton8" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="15">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="16">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="17h - 18h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText9" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel9" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton9" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="17">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="18">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="18h - 19h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText10" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel10" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton10" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="19">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="20">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="19h - 20h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText11" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel11" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton11" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="21">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="22">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="20h - 21h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText12" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel12" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton12" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="412.0" prefHeight="4.0" prefWidth="412.0" GridPane.rowIndex="23">
+               <children>
+                  <Separator id="primaryHSeparator" minWidth="-Infinity" prefWidth="412.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <GridPane hgap="5.0" GridPane.rowIndex="24">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="71.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="187.0" prefWidth="187.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="36.0" minHeight="36.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="80.0" text="21h - 22h">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="smallText13" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado por">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="bigLabel13" prefHeight="28.0" prefWidth="113.0" text="gothmommys">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                     <children>
+                        <Button id="primaryButton" fx:id="bookButton13" mnemonicParsing="false" onAction="#bookAction" prefHeight="36.0" prefWidth="108.0" text="Reservar" />
+                     </children>
+                  </HBox>
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="1" />
+                  <Separator id="secondaryVSeparator" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <right>
+      <VBox id="imageVBox" alignment="CENTER" prefHeight="660.0" prefWidth="108.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="courtImage" fitHeight="75.0" fitWidth="125.0" pickOnBounds="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../Iconos/pistas/pista1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="courtName" alignment="CENTER" prefHeight="39.0" prefWidth="85.0" text="Pista 1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets left="8.0" right="8.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

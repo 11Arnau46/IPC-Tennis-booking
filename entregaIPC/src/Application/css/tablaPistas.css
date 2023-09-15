@@ -1,0 +1,55 @@
+	
+    #secondaryButton {
+        -fx-background-color: transparent;
+        -fx-border-color: #2e98e5;
+        -fx-text-fill: #2e98e5;
+        -fx-border-width: 3px;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-cursor: hand;
+    }
+    #secondaryButton:hover {
+        -fx-background-color: #e5f212;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    #secondaryButton:pressed {
+        -fx-background-color: #bdc80f;
+        -fx-text-fill: white;
+        -fx-font-family:Arial;
+        -fx-font-weight:bold;
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+    #pistaLibre{
+        -fx-text-fill: #149716;
+        -fx-font-size: 16p;
+        -fx-font-weight: bold;
+    }
+    #pistaOcupada{
+        -fx-text-fill: #c91e1e;
+        -fx-font-size: 16p;
+        -fx-font-weight: bold;
+    }
+    .grid-pane > .grid-cell {
+        -fx-border-color: #98d1fa;
+    }
+    

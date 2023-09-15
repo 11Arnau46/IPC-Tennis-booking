@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.10.8
+Created-By: 17.0.2+8-LTS-86 (Oracle Corporation)
+Class-Path: lib/sqlite-jdbc-3.41.2.1.jar lib/javafx.graphics.jar lib/j
+ avafx.swing.jar
+

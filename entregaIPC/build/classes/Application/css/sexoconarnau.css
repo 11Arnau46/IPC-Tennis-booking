@@ -1,0 +1,75 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    .background  {
+        -fx-background-color: #f2e8cf
+    }
+    
+    .text-field, .password-field {
+        -fx-font-size: 15px;
+        -fx-prompt-text-fill: gray;
+        -fx-background-color: #f5f5f5;
+        -fx-border-color: #ccc;
+        -fx-border-radius: 5px
+    }
+    .text-field:focused {
+        -fx-border-color: #4286f4
+    }
+    .text-field:disabled {
+        -fx-opacity: 0.7
+    }
+    .password-field:focused {
+        -fx-border-color: #4286f4
+    }
+    .password-field:disabled {
+        -fx-opacity: 0.7
+    }
+    .text-field:hover {
+        -fx-border-color: #ddd
+    }
+    .password-field:hover {
+        -fx-border-color: #ddd
+    }
+    .button {
+        -fx-background-color: skyblue;
+        -fx-text-fill: white;
+        -fx-font-size: 16px;
+        -fx-padding: 8px 16px 8px 16px;
+        -fx-border-radius: 4px;
+        -fx-background-radius: 4px;
+        -fx-background-insets: 0;
+        -fx-border-color: transparent;
+        -fx-cursor: hand;
+    }
+
+    .button:hover {
+        -fx-background-color: #2d73d8;
+    }
+
+    .button:pressed {
+        -fx-background-color: #1c4fa7;
+    }
+    .checkbox {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    }
+
+    .checkbox .box {
+        -fx-background-color: #fff;
+        -fx-border-color: #ccc;
+        -fx-border-width: 2px;
+        -fx-border-radius: 4px;
+    }
+
+    .checkbox:selected .box {
+        -fx-background-color: #4286f4;
+        -fx-border-color: #4286f4;
+    }
+
+    .checkbox:selected .check-mark {
+        -fx-opacity: 1;
+    }
+    
+}

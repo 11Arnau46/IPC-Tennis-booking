@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="border-pane" fx:id="ventanaSesion" minHeight="300.0" minWidth="300.0" prefHeight="750.0" prefWidth="700.0" style="-fx-background-image: url(&quot;Iconos/WALLPAPER/background3.png&quot;); -fx-background-size: cover;" stylesheets="@../css/inicio.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller.inicioSesionController">
+   <center>
+      <HBox alignment="CENTER" stylesheets="@../css/inicio.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" stylesheets="@../css/inicio.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="161.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+                     <image>
+                        <Image url="@../../Iconos/logo.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="102.0" prefWidth="276.0" stylesheets="@../css/inicio.css" VBox.vgrow="NEVER">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="80.0" prefWidth="50.0" stylesheets="@../css/inicio.css" HBox.hgrow="NEVER">
+                           <children>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Iconos/userLogIN.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="7.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="33.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Iconos/padlock.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="243.0" stylesheets="@../css/inicio.css" HBox.hgrow="NEVER">
+                           <children>
+                              <TextField fx:id="userTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="31.0" minWidth="177.0" prefHeight="31.0" prefWidth="177.0" promptText="Usuario" stylesheets="@../css/inicio.css">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </TextField>
+                              <GridPane prefHeight="38.0" prefWidth="196.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="181.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="30.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints />
+                                </rowConstraints>
+                                 <children>
+                                    <PasswordField fx:id="passPasswordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="177.0" promptText="Contraseña" stylesheets="@../css/inicio.css">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </PasswordField>
+                                    <TextField fx:id="passwordDisplayField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="177.0" stylesheets="@../css/inicio.css" visible="false">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></TextField>
+                                    <Button id="showPassword" fx:id="showPassword" minWidth="-Infinity" mnemonicParsing="false" onAction="#MostrarContraseña" prefHeight="38.0" prefWidth="35.0" stylesheets="@../css/inicio.css" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <ImageView id="showPassword" fx:id="imageEye" disable="true" fitHeight="29.0" fitWidth="18.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Iconos/eye.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                              <Label fx:id="errorPasswordDifferent" disable="true" textFill="RED">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="buttonLogIn" alignment="CENTER" mnemonicParsing="false" onAction="#iniciarSesion" prefHeight="34.0" prefWidth="132.0" stylesheets="@../css/inicio.css" text="Iniciar Sesión" textAlignment="CENTER" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Hyperlink fx:id="linkRegister" alignment="CENTER" onAction="#switchToRegister" prefHeight="23.0" prefWidth="307.0" stylesheets="@../css/inicio.css" text="Aún no tienes cuenta? Registrate" underline="true" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="90.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox id="toolBar" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="90.0" stylesheets="@../css/inicio.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button id="imageButton" maxHeight="90.0" maxWidth="90.0" minHeight="90.0" minWidth="90.0" mnemonicParsing="false" onAction="#switchToPistas" prefHeight="90.0" prefWidth="90.0">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" maxHeight="90.0" maxWidth="90.0" prefHeight="90.0" prefWidth="90.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Iconos/tennis-court.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" maxWidth="90.0" prefHeight="16.0" prefWidth="90.0" text="Horario" textAlignment="CENTER" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
